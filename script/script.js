@@ -1,11 +1,12 @@
-if (window.File) {
-    document.getElementById("drop").addEventListener("drop", onDrop, false);
-} else {
-    window.alert("not support");
-}
+// if (window.File) {
+//     document.getElementById("drop").addEventListener("drop", onDrop, false);
+// } else {
+//     window.alert("not support");
+// }
 
 function reload(name){
-    parent.name.location.reload(true)
+    parent.frames.menu.location.reload(true);
+    alert("reloaded")
 }
 
 function display(id,mes){
