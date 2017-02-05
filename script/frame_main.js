@@ -8,8 +8,6 @@ function onDrop(event) {
 	var file_name = files[i].name;
 
 	nameList.push(file_name);
-	info += file_name + "<br>"
-	display("info",info)
 	if (files[i].type.indexOf("image") == 0) {
 	    var reader = new FileReader();
 	    

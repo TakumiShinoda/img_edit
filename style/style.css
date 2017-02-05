@@ -1,16 +1,16 @@
-/* index.html */
+/* frame_main.html */
 .drop_area{
     display: table-cell;
     vertical-align:middle;
-    width:700px;
-    height:150px;
+    width: 700px;
+    height: 350px;
     border:1px solid;
     background-color:#ADD8E6
 }
 
 .drop_area:hover{
-filter:alpha(opacity=80);
-opacity:0.8;
+    filter:alpha(opacity=80);
+    opacity:0.8;
 }
 
 .text{
@@ -18,7 +18,7 @@ opacity:0.8;
     color:#f5f5f5
 }
 
-/* select.html */
+/* frame_menu.html */
 .menu_button{
     display: table-cell;
     vertical-align:middle;
@@ -35,4 +35,11 @@ opacity:0.8;
 
 .menu_text{
     text-align:center;
+}
+
+/* log.html */
+.log{
+    width:700px;
+    height:300px;
+    border:1px solid;
 }
