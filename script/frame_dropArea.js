@@ -14,15 +14,12 @@ function onDrop(event) {
 	    reader.onload = function(evt){
 		document.querySelector("#img").src = reader.result;
 	    }
-	    
 	    reader.readAsDataURL(files[i]);
 	}
-
-	parent.frames.frame_log.add(file_name + ":Added");
+	parent.frames.frame_log.add(file_name + ":added");
     }
-
     parent.frames.frame_log.load();
-    parent.frames.frame_menu.addMenu(nameList);
+    parent.frames.frame_menu.addMenu(files.length,nameList);
     event.preventDefault();
 }
 
