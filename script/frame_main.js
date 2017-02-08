@@ -6,21 +6,15 @@ function onDrop(event) {
     
     for (var i = 0;i < files.length;i++){
 	var file_name = files[i].name;
-
-	nameList.push(file_name);
-	if (files[i].type.indexOf("image") == 0) {
-	    var reader = new FileReader();
-	    
-	    reader.onload = function(evt){
-		document.querySelector("#img").src = reader.result;
-	    }
-	    
-	    reader.readAsDataURL(files[i]);
-	}
-
+	
+	nameList[i] = [];
+	nameList[i][0] = file_name;
+	nameList[i][1] = files[i]
 	parent.frames.frame_log.add(file_name + ":Added");
     }
 
+    console.log(nameList);
+    
     parent.frames.frame_log.load();
     parent.frames.frame_menu.addMenu(nameList);
     event.preventDefault();

@@ -18,7 +18,7 @@ function showMenu(){
     var script = "<div class=menu_button><div class=menu_text onclick=tap_label(-1)>M</div></div><br>";
 
     for(var i = 0;i < labels.length;i++){
-	script += "<div class=menu_button><div class=menu_text onclick=tap_label("+ i +")>"+ labels[i].substr(0,1) +"</div></div><br>";
+	script += "<div class=menu_button><div class=menu_text onclick=tap_label("+ i +")>"+ labels[i][0].substr(0,1) +"</div></div><br>";
     }
 
     display("menu",script)
