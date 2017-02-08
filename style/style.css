@@ -39,7 +39,13 @@
 
 /* log.html */
 .log{
-    width:700px;
-    height:300px;
-    border:1px solid;
+    font-size: 13px;
+    /* width:700px; */
+    /* height:300px; */
+    /* border:1px solid; */
+}
+
+hr.logLine{
+    padding: 0;
+    border-top: 1px solid rgba(220,220,220,1);
 }

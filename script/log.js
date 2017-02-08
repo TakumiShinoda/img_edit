@@ -2,7 +2,7 @@ var logs = [];
 
 function init_log(){
     logs = [];
-    logs.unshift(dateLog() + "  start program!");
+    logs.unshift(dateLog() + "start program!");
     load();
 }
 
@@ -24,10 +24,16 @@ function add(log){
 }
 
 function load(){
-    var script = "<hr>";
+    var script = "";
+    addLine();
+    
+    function addLine(){
+	script += "<hr class=logLine>"
+    }
     
     for(var i = 0;i < logs.length;i++){
-	script += logs[i] + "<hr>";
+	script += logs[i];
+	addLine();
     }
 
     display("log",script);
