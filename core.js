@@ -1,6 +1,5 @@
 'use strict';
 
-var fs = require('fs');
 var electron = require('electron');
 var app = electron.app;
 var BrowserWindow = electron.BrowserWindow;
@@ -15,7 +14,6 @@ app.on('ready', function() {
 	width: 800,
 	height: 600
     });
-    
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     mainWindow.on('closed', function() {

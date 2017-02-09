@@ -7,8 +7,8 @@ function display(id,mes){
 }
 
 $(function () {
-  $(document).on('drop dragover', function (e) {
-    e.stopPropagation();
-    e.preventDefault();
-  });
+    $(document).on('drop dragover', function (e) {
+	e.stopPropagation();
+	e.preventDefault();
+    });
 });

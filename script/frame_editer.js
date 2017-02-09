@@ -5,18 +5,21 @@ function getContents(){
 
 function loadEditer(data){
     var script = "";
-
-    console.log(data);
+    var reader = new FileReader();
     
-    script += data[0];
-    display("editArea",script); 
+    display("imgName",data[0]); 
 
     if (data[1].type.indexOf("image") == 0){
-	var reader = new FileReader();
-	
 	reader.onload = function(evt){
 	    document.querySelector("#editing_img").src = reader.result;
 	}   
 	reader.readAsDataURL(data[1]);
     }
+
+    script += "<br><div class=hsv onclick=toHSV()>HSV</div>"
+    display("options",script);
+}
+
+function toHSV(){
+    console.log("pass");
 }
