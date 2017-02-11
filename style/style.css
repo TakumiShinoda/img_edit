@@ -67,8 +67,14 @@ hr.logLine{
 }
 
 /* frame_editer.html */
+body.editer{
+    background-color: #cccccc;
+}
+
 .editingArea{
+    background-color: #ffffff;
     border: 1px dotted;
+    border-radius: 6px;
     padding: 10px 0px 10px
 }
 
@@ -103,7 +109,7 @@ hr.logLine{
     outline: none;
     position: relative;
     z-index: 2;
-    background-color: #ffffff;
+    background-color: #cccccc;
     border: 2px solid #5B43FA;
     border-radius: 8px;
     color: #5B43FA;
@@ -111,7 +117,7 @@ hr.logLine{
 }
 
 .optionStyle:hover{
-    color: #ffffff;
+    color: #cccccc;
 }
 
 .optionStyle::after{
@@ -141,5 +147,5 @@ hr.logLine{
 
 .optionStyle.active {
     background-color: #5B43FA;
-    color: #ffffff;
+    color: #cccccc;
 }
