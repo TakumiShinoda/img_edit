@@ -1,4 +1,4 @@
-i/* common */
+/* common */
 body {
     animation: fadeIn 2s ease 0s 1 normal;
     -webkit-animation: fadeIn 2s ease 0s 1 normal;
@@ -24,7 +24,6 @@ body.frame_main{
     width: 150vh;
     display: table-cell;
     vertical-align:middle;
-    /* border:1px solid; */
     background-color:#ADD8E6
 }
 
@@ -69,11 +68,11 @@ hr.logLine{
 
 /* frame_editer.html */
 .editingArea{
-    border: 1px dashed;
+    border: 1px dotted;
     padding: 10px 0px 10px
 }
 
-.hsv::before{
+.optionStyle::before{
     position: absolute;
     z-index: -1;
     display: block;
@@ -85,42 +84,47 @@ hr.logLine{
     transition: all .3s;
 }
 
-.hsv{
+.optionStyle{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all .3s;
     transition: all .3s;
-    display: inline-block;
+    
+    display: table-cell;
+    vertical-align:middle;
     width: 60px;
-    height: 30px;
+    height: 37.5px;
     text-align: center;
     text-decoration: none;
-    line-height: 54px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "ＭＳ Ｐゴシック",sans-serif;
     outline: none;
     position: relative;
     z-index: 2;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: #ffffff;
+    border: 2px solid #5B43FA;
     border-radius: 8px;
-    color: #333;
-    line-height: 30px;
+    color: #5B43FA;
     overflow: hidden;
 }
-.hsv:hover {
-    color: #fff;
+
+.optionStyle:hover{
+    color: #ffffff;
 }
 
-.hsv::after {
+.optionStyle::after{
     position: absolute;
     z-index: -1;
-    display: block;
+    display: table-cell;
     content: '';
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all .3s;
     transition: all .3s;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -128,22 +132,9 @@ hr.logLine{
     -webkit-transform: scale(.5);
     transform: scale(.5);
 }
-.hsv:hover::after {
-    background: #333;
+
+.optionStyle:hover::after{
+    background: #5B43FA;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-
-/* .hsv{ */
-/*     font-size: 20px; */
-/*     color: #5B43FA; */
-/*     padding: 5px 10px; */
-/*     border: 2px solid #5B43FA; */
-/*     border-radius: 4px; */
-/*     display: inline-block; */
-/* } */
-
-/* .hsv:hover{ */
-/*     filter:alpha(opacity=80); */
-/*     opacity:0.8; */
-/* } */

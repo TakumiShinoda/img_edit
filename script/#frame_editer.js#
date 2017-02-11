@@ -9,8 +9,6 @@ function resizeImage(img){
     var origin_w = img.width;
     var origin_h = img.height;
     var per = max_w / origin_w * 100;;
-
-    console.log("aaa")
     
     document.editing_img.width = max_w;
     document.editing_img.height = origin_h / 100 * per;
