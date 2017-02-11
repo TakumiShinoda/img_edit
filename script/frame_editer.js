@@ -1,5 +1,11 @@
 max_w = 690;
 
+$(function(){
+    $('.optionStyle').on('click', function(){
+        $(this).toggleClass('active');
+    });
+});
+
 function getContents(){
     var sentData = parent.frame_menu.return_contents();
     loadEditer(sentData);
@@ -9,8 +15,6 @@ function resizeImage(img){
     var origin_w = img.width;
     var origin_h = img.height;
     var per = max_w / origin_w * 100;;
-
-    console.log("aaa")
     
     document.editing_img.width = max_w;
     document.editing_img.height = origin_h / 100 * per;
@@ -33,17 +37,14 @@ function loadEditer(data){
 	    if(editing_img.width > 690){
 		resizeImage(editing_img);
 	    }
-	    console.log(editing_img.width);
 	}
     }
-
     reader.readAsDataURL(data[1]);
 
-    script += "<br><div class=optionStyle onclick=toHSV()>HSV</div>"
+    script += "<br><div id=optionStyle class=optionStyle onclick=toHSV()>HSV</div>"
     display("options",script);
 }
 
 function toHSV(){
-    // console.log("pass");
-    
+    console.log("pass");
 }

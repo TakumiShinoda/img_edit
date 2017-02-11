@@ -138,3 +138,8 @@ hr.logLine{
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
+.optionStyle.active {
+    background-color: #5B43FA;
+    color: #ffffff;
+}
