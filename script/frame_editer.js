@@ -31,8 +31,6 @@ function loadEditer(data){
 	reader.onload = function(evt){
 	    document.querySelector("#editing_img").src = reader.result;
 	    editing_img.src = document.getElementById('editing_img').src;
-
-	    console.log(editing_img.width);
 	    
 	    if(editing_img.width > 690){
 		resizeImage(editing_img);
@@ -41,12 +39,6 @@ function loadEditer(data){
     }
     reader.readAsDataURL(data[1]);
 
-    script += "<br><div id=optionStyle class=optionStyle onclick=toHSV()>HSV</div>"
+    script += "<br><div id=optionStyle class=optionStyle onclick=ic.toHSV()>HSV</div>"
     display("options",script);
-}
-
-function toHSV(){
-    new Matrix(rows, cols)
-    
-    console.log("pass");
 }
