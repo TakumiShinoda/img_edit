@@ -8,7 +8,6 @@ function onDrop(event) {
 	var file_name = files[i].name;
 
 	if (files[i].type.indexOf("image") == 0){
-	    console.log("pass");
 	    dataList[j] = [];
 	    dataList[j][0] = file_name;
 	    dataList[j][1] = files[i]
@@ -17,10 +16,7 @@ function onDrop(event) {
 	}else{
 	    parent.frames.frame_log.add(file_name + ":not supported")
 	}
-    }
-
-    console.log(dataList);
-    
+    }    
     parent.frames.frame_log.load();
     parent.frames.frame_menu.addMenu(dataList);
     event.preventDefault();

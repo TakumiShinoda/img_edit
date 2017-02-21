@@ -1,5 +1,10 @@
 var logs = [];
 
+function closeLog(){
+    parent.mainFrame.rows = "80%,0%";
+    parent.frame_main.document.getElementById("openLog").style.display = "block";
+}
+
 function init_log(){
     logs = [];
     logs.unshift(dateLog() + "start program!");
@@ -35,6 +40,5 @@ function load(){
 	script += logs[i];
 	addLine();
     }
-
     display("log",script);
 }
