@@ -2,6 +2,5 @@
 
 var ic = ic || {};
 
-ic.toHSV = (function (){
-    console.log("pass");
+ic.toHSV = (function (){    
 });

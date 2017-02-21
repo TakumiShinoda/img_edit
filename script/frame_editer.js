@@ -11,34 +11,28 @@ function getContents(){
     loadEditer(sentData);
 }
 
-function resizeImage(img){
-    var origin_w = img.width;
-    var origin_h = img.height;
-    var per = max_w / origin_w * 100;;
-    
-    document.editing_img.width = max_w;
-    document.editing_img.height = origin_h / 100 * per;
-}
-
 function loadEditer(data){
     var script = "";
     var reader = new FileReader();
     var editing_img = new Image();
+    var canvas = document.getElementById("editing_img");
+    var ctx = canvas.getContext('2d');
     
-    display("imgName",data[0]); 
+    display("imgName",data[0]);
 
-    if (data[1].type.indexOf("image") == 0){
-	reader.onload = function(evt){
-	    document.querySelector("#editing_img").src = reader.result;
-	    editing_img.src = document.getElementById('editing_img').src;
-	    
-	    if(editing_img.width > 690){
-		resizeImage(editing_img);
-	    }
-	}
+    editing_img.src = data[1].path + "?" + new Date().getTime();
+    
+    editing_img.onload = function() {
+	var scale = 1;
+	if(editing_img.width > 690){
+	    scale = 690 / editing_img.width;
+    	}
+	var dstw = editing_img.width * scale;
+	var dsth = editing_img.height * scale;
+	canvas.width = dstw;
+	canvas.height = dsth;
+	ctx.drawImage(editing_img,0,0,editing_img.width,editing_img.height,0,0,dstw,dsth);
     }
-    reader.readAsDataURL(data[1]);
-
     script += "<br><div id=optionStyle class=optionStyle onclick=ic.toHSV()>HSV</div>"
     display("options",script);
 }
